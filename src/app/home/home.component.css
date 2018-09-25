@@ -1,0 +1,26 @@
+.background-char{
+    border:inset;
+    border-color:cornflowerblue;
+    background-image: url('/assets/images/character3.jpg');
+    background-size: cover;
+}
+
+.card-common{
+    font-family: 'Comic Sans Ms';
+    color: rgb(77, 75, 75);
+    margin: 10px;
+}
+
+.background-book{
+    border:inset;
+    border-color:brown;
+    background-image: url('/assets/images/books.png');
+    background-size: contain;
+}
+
+.background-house{
+    border:inset;
+    border-color:hotpink;
+    background-image: url('/assets/images/houses.jpg');
+    background-size: cover;
+}

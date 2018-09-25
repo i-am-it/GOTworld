@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+        <label  class="control-label" style="margin:3px;background-color:grey;border-radius: 5px;"> Select a Category - &nbsp;</label>
+        <select [(ngModel)]="selected" name="status" placeholder="All" (ngModelChange)="onOptionsSelected($event)">
+            <option *ngFor="let sta of status" [ngValue]="sta">{{sta}}</option>
+        </select>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" style="background-image: url('/assets/images/cover.jpg');background-size: contain">
+  <div class="row justify-content-center" style="font-weight: bold;font-size:25px;font-family:comic sans ms;text-align:center;">
+      <div class="col-6" style="padding:3px;background-color: gray">The world of Game Of Thrones is here - </div>
+  </div>
+  <div class="row" *ngIf = "allItems.length>29">
+    <div class="col" style="display:flex; flex-wrap: wrap">
+        <div *ngFor = "let item of allItems | sort">
+          <div *ngIf = "item.url.includes('character')" [hidden]= "!cha"  [ngClass]="{'background-char':item.url.includes('character'),'background-book':item.url.includes('book'),'background-house':item.url.includes('house')}" class="card text-center card-common" style="width: 18rem;height: 144px;">
+              <div class="card-body">
+                <h5 class="card-title" ><em style="background-color:rgb(236, 223, 223);font-weight: bold">{{item.name}}<span *ngIf = "item.name.length>0 && item.aliases[0].length>0"> a.k.a </span> {{item.aliases[0]}}</em></h5>
+                <p class="card-text"></p>
+                <a [routerLink]="['/details',item.url]" class="btn btn-primary">View Details</a>
+              </div>
+          </div>
+          <div *ngIf = "item.url.includes('book')" [hidden]= "!boo" [ngClass]="{'background-char':item.url.includes('character'),'background-book':item.url.includes('book'),'background-house':item.url.includes('house')}" class="card text-center card-common" style="width: 18rem;height: 144px;">
+              <div class="card-body">
+                <h5 class="card-title" ><em style="background-color:rgb(236, 223, 223);font-weight: bold">{{item.name}}<span *ngIf = "item.name.length>0"></span> </em></h5>
+                <p class="card-text"></p>
+                <a [routerLink]="['/details',item.url]" class="btn btn-primary">View Details</a>
+              </div>
+          </div>
+          <div *ngIf = "item.url.includes('house')" [hidden]= "!hou" [ngClass]="{'background-char':item.url.includes('character'),'background-book':item.url.includes('book'),'background-house':item.url.includes('house')}" class="card text-center card-common" style="width: 18rem;height: 144px;">
+              <div class="card-body">
+                <h5 class="card-title" ><em style="background-color:rgb(236, 223, 223);font-weight: bold">{{item.name}}<span *ngIf = "item.name.length>0"></span> </em></h5>
+                <p class="card-text"></p>
+                <a [routerLink]="['/details',item.url]" class="btn btn-primary">View Details</a>
+              </div>
+          </div>
+        </div> 
+    </div>
+  </div>
+</div>

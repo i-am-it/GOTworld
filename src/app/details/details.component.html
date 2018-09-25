@@ -1,0 +1,222 @@
+<div class="container" id="movie" *ngIf = "item.url!=undefined">
+  <div class="row">
+    <div class="col"><button type="button" [routerLink]="['/home']" class="btn btn-info back">Back</button></div>
+  </div>
+  <div class="row" *ngIf = "item.url.includes('character')">
+    <div class = "col-12">
+      <img id="moviePic"  src="/assets/images/game-character.jpg" style="width:100%;height:300px">
+    </div>
+    <div class="col-12" id="movieD">
+      <div class="container">
+        <div class="row">
+          <div class="col" *ngIf = "item.name.length > 0">
+            <span class="headin">Name :</span> <span>{{item.name}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.gender.length > 0">
+            <span class="headin">Gender :</span> <span> {{item.gender}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.culture.length > 0">
+            <span class="headin">Culture :</span> <span> {{item.culture}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.born.length > 0">
+            <span class="headin">Born On :</span> <span> {{item.born}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.died.length > 0">
+            <span class="headin">Died :</span> <span> {{item.died}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.titles[0].length > 0">
+            <span class="headin">Titles :</span> <span> {{item.titles}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.aliases[0].length > 0">
+            <span class="headin">Aliases :</span> <span> {{item.aliases}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.father.length > 0">
+            <span class="headin">Father :</span> <span> {{item.father}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.mother.length > 0">
+            <span class="headin">Mother :</span> <span> {{item.mother}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.spouse.length > 0">
+            <span class="headin">Spouse :</span> <span> {{item.spouse}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.allegiances.length > 0">
+            <span class="headin">Allegiances :</span> <span> {{item.allegiances}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.books[0].length > 0">
+            <span class="headin">Books :</span> <span> {{item.books}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.povBooks.length > 0">
+            <span class="headin">POV Books :</span> <span> {{item.povBooks}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.tvSeries[0].length > 0">
+            <span class="headin">TV Series :</span> <span> {{item.tvSeries}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.playedBy[0].length > 0">
+            <span class="headin">Played By :</span> <span> {{item.playedBy}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf = "item.url.includes('book')">
+    <div class = "col-12">
+      <img id="moviePic"  src="/assets/images/books.jpg" style="width:100%;height:300px">
+    </div>
+    <div class="col-12" id="movieD">
+      <div class="container">
+        <div class="row">
+          <div class="col" *ngIf = "item.name.length > 0">
+            <span class="headin">Name :</span> <span>{{item.name}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.isbn.length > 0">
+            <span class="headin">ISBN :</span> <span> {{item.isbn}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.numberOfPages.length > 0">
+            <span class="headin">No of Pages :</span> <span> {{item.numberOfPages}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.publisher.length > 0">
+            <span class="headin">Published by :</span> <span> {{item.publisher}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.country.length > 0">
+            <span class="headin">Country :</span> <span> {{item.country}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.mediaType.length > 0">
+            <span class="headin">Type :</span> <span> {{item.mediaType}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.released.length > 0">
+            <span class="headin">Released On :</span> <span> {{item.released | date}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.povCharacters.length > 0">
+            <span class="headin">POV characters :</span> <span> {{item.povCharacters}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf = "item.url.includes('house')">
+    <div class = "col-12">
+      <img id="moviePic"  src="/assets/images/houses-cover.jpg" style="width:100%;height:300px">
+    </div>
+    <div class="col-12" id="movieD">
+      <div class="container">
+        <div class="row">
+          <div class="col" *ngIf = "item.name.length > 0">
+            <span class="headin">Name :</span> <span>{{item.name}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.region.length > 0">
+            <span class="headin">Region :</span> <span> {{item.region}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.coatOfArms.length > 0">
+            <span class="headin">Coat of Arms :</span> <span> {{item.coatOfArms}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.words.length > 0">
+            <span class="headin">Words :</span> <span> {{item.words}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.titles[0].length > 0">
+            <span class="headin">Titles :</span> <span> {{item.titles}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.seats[0].length > 0">
+            <span class="headin">Seats :</span> <span> {{item.seats}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.currentLord.length > 0">
+            <span class="headin">Current Lord :</span> <span> {{item.currentLord | date}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.heir.length > 0">
+            <span class="headin">Heir :</span> <span> {{item.heir}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.overlord.length > 0">
+            <span class="headin">Over Lord :</span> <span> {{item.overlord}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.founded.length > 0">
+            <span class="headin">Founded :</span> <span> {{item.founded}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.founder.length > 0">
+            <span class="headin">Founder :</span> <span> {{item.founder}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.diedOut.length > 0">
+            <span class="headin">Died Out :</span> <span> {{item.diedOut}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.ancestralWeapons[0].length > 0">
+            <span class="headin">Ancestral Weapons :</span> <span> {{item.ancestralWeapons}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.cadetBranches.length > 0">
+            <span class="headin">Cadet Branches :</span> <span> {{item.cadetBranches}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" *ngIf = "item.swornMembers.length > 0">
+            <span class="headin">Sworn Members :</span> <span> {{item.swornMembers}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

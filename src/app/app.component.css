@@ -1,0 +1,22 @@
+.header{
+    background-image: url('/assets/images/got_head');
+    background-size: contain;
+	padding: 15px 0px;
+	font-size: 30px;
+	font-family: "Comic Sans MS";
+	font-weight: bold;
+}
+
+#head{
+	background-color: rgb(77, 75, 75);
+	color: rgb(236, 223, 223);
+	padding: 5px;
+	border-radius: 5px;
+}
+
+#span-head{
+	background-color: rgb(236, 223, 223);
+	color: rgb(77, 75, 75);
+	border-radius: 5px;
+	padding: 2px;
+}

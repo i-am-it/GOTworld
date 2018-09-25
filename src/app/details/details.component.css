@@ -1,0 +1,30 @@
+.headin{
+	font-weight: bold;
+	margin-right: 5px;
+	background-color: black;
+	color: white;
+	padding:2px;
+	border-radius: 5px;
+}
+
+span{
+	display: block;
+	padding: 2px 7px;
+	font-weight: bold;
+	font-style: italic;
+	word-break: break-all;
+}
+
+.row{
+	padding-bottom: 10px;
+}
+
+p {
+	word-break: break-all;
+	overflow: hidden;
+	white-space: initial;
+  }
+
+.container{
+	padding: 25px 0;
+}
